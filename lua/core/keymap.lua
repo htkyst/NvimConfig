@@ -7,8 +7,8 @@ if flags.use_vscode then
 end
 
 -- Move buffer
-vim.keymap.set("n", "bn", ":bn<CR>", { silent = true })
-vim.keymap.set("n", "bp", ":bp<CR>", { silent = true })
+vim.keymap.set("n", "<leader>bn", ":bn<CR>", { silent = true })
+vim.keymap.set("n", "<leader>bp", ":bp<CR>", { silent = true })
 
 -- Move pane
 vim.keymap.set("n", "<leader>h", "<C-w>h", { silent = true })
