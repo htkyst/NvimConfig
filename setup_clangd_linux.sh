@@ -1,4 +1,11 @@
-sudo install clangd jq
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+	echo "Required "sudo""
+	exit 1
+fi
+
+apt install clangd jq
 mkdir -p ~/.local/share/nvim/mason/packages/clangd/mason-schemas
 cd ~/.local/share/nvim/mason/packages/clangd
 curl https://raw.githubusercontent.com/clangd/vscode-clangd/master/package.json \
